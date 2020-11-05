@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+
+
+       xsi:schemaLocation="
+ 		http://www.springframework.org/schema/beans
+ 		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+ 		http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+    <bean id="catalogModule" class="Modules.CatalogModule"/>
+    <bean id="imageModule" class="Modules.ImageModule"/>
+    <bean id="textModule" class="Modules.TextModule"/>
+    <bean id="mp3Module" class="Modules.Mp3Module"/>
+
+    <util:list id="modules">
+        <ref bean="catalogModule"/>
+        <ref bean="imageModule"/>
+        <ref bean="textModule"/>
+        <ref bean="mp3Module"/>
+    </util:list>
+</beans>
